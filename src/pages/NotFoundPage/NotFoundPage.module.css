@@ -1,0 +1,19 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-bottom: 35px;
+}
+
+.emoji {
+    font-weight: 600;
+    color: #4F7CAC;
+}

@@ -1,0 +1,33 @@
+
+.container {
+    min-width: 310px;
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #DDDDDD;
+    justify-content: space-between;
+    padding: 15px 25px;
+    border-radius: 16px;
+    margin: 10px 0;
+}
+
+.dual_group {
+    display: flex;
+    flex-direction: column;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.title  {
+    font-weight: bold;
+    text-align: center;
+    margin: 7px 0;
+}
+
+.contact_link {
+    color:#4F7CAC;
+    text-decoration: none;
+}

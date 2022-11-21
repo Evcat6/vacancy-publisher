@@ -1,0 +1,21 @@
+.label {
+    margin-bottom: 5px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+}
+
+.input_body {
+    height: 35px;
+    width: auto;
+    padding: 0 7px;
+    border-radius: 8px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}

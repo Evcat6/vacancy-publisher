@@ -1,0 +1,15 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: #4F7CAC;
+    justify-content: space-between;
+    padding: 20px 40px;
+    width: 100%;
+    border-radius: 16px 0px 0px 16px;
+}
+
+.input_group {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

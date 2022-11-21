@@ -1,0 +1,15 @@
+
+
+.btn {
+    text-decoration: none;
+    color: #4F7CAC;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+
+.btn:active {
+    transform: scale(0.98);
+}

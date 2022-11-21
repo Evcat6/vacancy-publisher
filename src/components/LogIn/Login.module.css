@@ -1,0 +1,18 @@
+/* DDDDDD */
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: #DDDDDD;
+    justify-content: space-between;
+    padding: 20px 40px;
+    width: 100%;
+    border-radius: 0px 16px 16px 0px;
+}
+
+.input_group {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

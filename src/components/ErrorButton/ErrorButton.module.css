@@ -1,0 +1,19 @@
+
+
+.btn {
+
+    min-height: 40px;
+    background-color: #4F7CAC;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    text-decoration: none;
+    padding: 0 10px;
+    
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
