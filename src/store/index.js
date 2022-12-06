@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 
 const rootReducer = combineReducers({
     auth: authReducer,
-    jobs: jobsReducer
+    jobs: jobsReducer,
 })
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));

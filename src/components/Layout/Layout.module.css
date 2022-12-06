@@ -1,31 +1,7 @@
-
 .header {
     position: fixed;
     background-color: #4F7CAC;
     width: 100vw;
     height: 70px;
     padding: 0 40px;
-}
-
-.nav {
-    position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-}
-
-.list_link {
-    list-style: none;
-}
-
-.link { 
-    display: inline-block;
-}
-
-.log_out {
-    position: absolute;
-    right: 0;
-    top: -50%;
 }

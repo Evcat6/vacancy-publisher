@@ -10,11 +10,19 @@
     padding: 15px 25px;
     border-radius: 16px;
     margin: 10px 0;
+    position: relative;
 }
 
 .dual_group {
     display: flex;
     flex-direction: column;
+}
+
+.clear_icon {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 22px;
 }
 
 .bold {

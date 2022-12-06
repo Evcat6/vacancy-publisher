@@ -8,3 +8,4 @@ export { default as CustomNavLink } from './CustomNavLink/CustomNavLink';
 export { default as LogOutButton } from './LogOutButton/LogOutButton';
 export { default as ErrorButton } from './ErrorButton/ErrorButton';
 export { default as VacancyItem } from './VacancyItem/VacancyItem';
+export { default as NavigatePanel } from './NavigatePanel/NavigatePanel';

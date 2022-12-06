@@ -1,20 +1,30 @@
 import React from 'react'
 import styles from './VacancyItem.module.css';
 import PropTypes from 'prop-types';
+import { RiDeleteBin7Fill } from 'react-icons/ri';
 
 const VacancyItem = (
-    {rec_name,
-    rec_email, 
-    rec_phone, 
-    experience, 
-    work_stack, 
-    salary, 
-    date, 
-    ...props}
+    {
+        rec_name,
+        rec_email, 
+        rec_phone, 
+        experience, 
+        work_stack, 
+        salary, 
+        date, 
+        user_page = false,
+        deleteItem,
+        ...props
+    }
     ) => {
+
   return (
     <article className={styles.container} {...props} >
         <div className={styles.recruiter_info}>
+            {
+                user_page && 
+                <span className={styles.clear_icon} onClick={deleteItem} ><RiDeleteBin7Fill/></span>
+            }
             <h1 className={styles.title} >Recruiter Info</h1>
             <p><span className='bold'>Name: </span>{rec_name}</p>
             <p><span className='bold' >Email: </span><a className={styles.contact_link} href={`mailto:${rec_email}`} >{rec_email}</a></p>
@@ -46,7 +56,8 @@ VacancyItem.propTypes = {
     experience: PropTypes.string, 
     work_stack: PropTypes.string, 
     salary: PropTypes.string, 
-    date: PropTypes.string
+    date: PropTypes.string,
+    deleteItem: PropTypes.func,
 }
 
 export default VacancyItem;

@@ -23,11 +23,11 @@ const CustomNavLink = ({children, to, ...props}) => {
     <NavLink
     to={to}
     {...props}
-    style={({ isActive }) =>
-    isActive ? activeStyle : noActiveStyle
+    style={({isActive}) =>
+      isActive ? activeStyle : noActiveStyle
     }
     >{children}</NavLink>
   )
 }
 
-export default CustomNavLink
+export default CustomNavLink;
