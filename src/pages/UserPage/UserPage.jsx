@@ -2,9 +2,10 @@ import React from 'react';
 import { VacancyItem } from '../../components';
 import styles from './UserPage.module.css';
 import { supabase  } from '../../supabaseClient'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 const UserPage = () => {
+  const dispatch = useDispatch();
   const user_vacancies = useSelector(state => state.jobs.jobs);
   const user_email = useSelector(state => state.auth.email);
 
