@@ -3,11 +3,15 @@ import { VacancyItem } from '../../components';
 import styles from './UserPage.module.css';
 import { supabase  } from '../../supabaseClient'
 import { useSelector, useDispatch } from 'react-redux';
+import { getJobList } from '../../asyncActions/jobs'
 
 const UserPage = () => {
   const dispatch = useDispatch();
+
+  const localStorageEmail = JSON.parse(localStorage.getItem(import.meta.env.VITE_APP_STORAGE_KEY));
+
   const user_vacancies = useSelector(state => state.jobs.jobs);
-  const user_email = useSelector(state => state.auth.email);
+  const user_email = localStorageEmail.user.email;
 
   const vacancies = user_vacancies.filter(e => e.contact_email === user_email);
 
@@ -18,6 +22,8 @@ const UserPage = () => {
     .from('vacancy')
     .delete()
     .eq('id', id)
+
+    dispatch(getJobList())
   }
 
   return (

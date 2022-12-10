@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Input, FormButton } from '../../components';
 import styles from './HomePage.module.css';
 import { supabase } from '../../supabaseClient'
-import { useSelector, useDispatch } from 'react-redux';
-import { getJobList } from '../../asyncActions/jobs'
+import { getJobList } from '../../asyncActions/jobs';
 
 const HomePage = () => {
-
-  const email = useSelector(state => state.auth.email)
   const dispatch = useDispatch();
+  const storage = localStorage.getItem('sb-eorfivltlacpljrejidk-auth-token');
+
+  const storageParsed = JSON.parse(storage);
 
   const fields = {
     rec_name: '',
@@ -28,11 +29,11 @@ const HomePage = () => {
 
     e.preventDefault();
 
-    const { data, error } = await supabase
+    await supabase
     .from('vacancy')
     .insert({
       rec_name: field.rec_name,
-      contact_email: email,
+      contact_email: storageParsed.user.email,
       phone_number: field.phone_number,
       work_experience: field.work_experience,
       work_stack: field.work_stack,

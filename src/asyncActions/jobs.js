@@ -10,7 +10,7 @@ const config = {
 
 export const getJobList = () => {
     return async(dispatch) => {
-        const request = await axios.get('https://eorfivltlacpljrejidk.supabase.co/rest/v1/vacancy?select=*', config);
+        const request = await axios.get(import.meta.env.VITE_APP_SUPABASE_REST_API_URL, config);
         const response = await request.data;
         dispatch(getJobListAction(response))
     }

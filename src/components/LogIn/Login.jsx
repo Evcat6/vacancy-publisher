@@ -1,15 +1,12 @@
 import { useState } from 'react';
 import { Input, FormButton } from '..'
 import styles from './Login.module.css';
-import { useDispatch } from 'react-redux';
 import { supabase } from '../../supabaseClient';
-import { setUserDataAction } from '../../store/authReducer';
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
   const navigate = useNavigate()
-  const dispatch = useDispatch()
 
   const fields = {
     email: "",
@@ -41,13 +38,12 @@ const Login = () => {
       email: field.email
     }
 
-    dispatch(setUserDataAction(payload))
-    
-    
+
     if(error === null) {
       navigate('/vacancy-form')
     }
-    
+
+    window.location.reload(true);
   }
   
   const updateFields = (e) => {

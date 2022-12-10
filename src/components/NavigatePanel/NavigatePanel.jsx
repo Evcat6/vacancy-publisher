@@ -1,11 +1,10 @@
 import React from 'react'
 import { CustomNavLink, LogOutButton } from '..'
-import { useSelector } from 'react-redux';
 import styles from './NavigatePanel.module.css';
 
 const Header = () => {
 
-  const userToken = useSelector(state => state.auth.token)
+  const userToken = JSON.parse(localStorage.getItem(import.meta.env.VITE_APP_STORAGE_KEY));
 
   return (
     <nav className={styles.nav} >

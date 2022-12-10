@@ -1,11 +1,11 @@
 import { Navigate } from "react-router";
-import { useSelector } from 'react-redux'
 
 const ProtectedRoute = ({children}) => {
 
-  const user = useSelector(state => state.auth);
 
-    if (!user.token || !user.role) {
+  const parsed = localStorage.getItem(import.meta.env.VITE_APP_STORAGE_KEY);
+
+    if (parsed === null) {
       return <Navigate to="/auth" replace />;
     }
   
