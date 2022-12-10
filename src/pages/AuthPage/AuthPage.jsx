@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './AuthPage.module.css';
 import { SignUp, Login } from '../../components'
 import icon from '../../assets/vacancy.svg'
 
 const AuthPage = () => {
+
+  useEffect(() => {
+    localStorage.clear();
+  }, [])
 
   return (
     <section className={styles.container}>

@@ -31,12 +31,6 @@ const Login = () => {
     if(error !== null && error.message === "Invalid login credentials") {
       return alert('Wrong email or password')
     }
-    
-    const payload = {
-      token: data.session.access_token,
-      role: data.user.role,
-      email: field.email
-    }
 
 
     if(error === null) {
