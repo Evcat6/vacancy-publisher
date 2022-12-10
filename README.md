@@ -1,3 +1,3 @@
 # Vacancy Publisher
 
-### WebSite for publishing vacancies
+### Web Site for publishing vacancies
